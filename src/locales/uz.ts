@@ -110,5 +110,19 @@ export const uz = {
     a4: "Yo'q, qurilmangizdagi holatni tekshirish (diagnostika) mutlaqo bepul. Xizmat narxini bilgandan so'ng qaror qabul qilishingiz mumkin.",
     q5: "Qanday to'lov usullari mavjud?",
     a5: "Siz Naqd pul, Payme, Click yoki Uzcard/Humo plastik kartalari orqali to'lov qilishingiz mumkin."
+  },
+  serviceDetail: {
+    back: "Barcha xizmatlar",
+    type: "Xizmat turi",
+    process: "Ta'mirlash jarayoni",
+    info: "Ma'lumotlar",
+    startingPrice: "Boshlang'ich narx",
+    warrantyPeriod: "Kafolat muddati",
+    avgTime: "O'rtacha vaqt",
+    cta: "Hoziroq bog'laning va muammongizni hal qiling.",
+    callBtn: "Qo'ng'iroq qilish",
+  },
+  legal: {
+    backHome: "Bosh sahifa",
   }
 };

@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, ShieldCheck, Phone, CheckCircle2 } from "lucide-react
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useModal } from "@/context/ModalContext";
+import { useLanguage } from "@/context/LanguageContext";
 
 export type ServiceDetails = {
   title: string;
@@ -17,6 +18,7 @@ export type ServiceDetails = {
 
 export default function ServiceDetailsClient({ data }: { data: ServiceDetails }) {
   const { openModal } = useModal();
+  const { t } = useLanguage();
   const router = useRouter();
 
   if (!data) return null;
@@ -53,7 +55,7 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
             <ArrowLeft size={16} className="text-gray-900 dark:text-white group-hover:-translate-x-0.5 transition-transform duration-300" />
           </div>
           <span className="text-xs font-bold tracking-[0.1em] uppercase text-gray-500 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white relative z-10 transition-colors duration-300">
-            Barcha xizmatlar
+            {t("serviceDetail.back")}
           </span>
         </Link>
 
@@ -76,7 +78,7 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
               <div className="absolute inset-0 bg-gradient-to-br from-black/5 dark:from-white/5 to-transparent pointer-events-none" />
               
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-600 dark:text-gray-300 text-xs font-bold tracking-widest uppercase mb-6 relative z-10">
-                Xizmat turi
+                {t("serviceDetail.type")}
               </div>
               
               <h1 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-6 tracking-tight drop-shadow-sm dark:drop-shadow-lg">
@@ -100,7 +102,7 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
 
               <div className="flex items-center gap-3 mb-10 relative z-10">
                 <CheckCircle2 className="text-gray-700 dark:text-gray-300 w-6 h-6" strokeWidth={2.5} />
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Ta&apos;mirlash jarayoni</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">{t("serviceDetail.process")}</h2>
               </div>
               
               <div className="flex flex-col gap-8 relative z-10">
@@ -129,18 +131,18 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
               {/* Inner highlight for glass effect */}
               <div className="absolute inset-0 rounded-[2rem] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8)] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] pointer-events-none" />
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 relative z-10">Ma&apos;lumotlar</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 relative z-10">{t("serviceDetail.info")}</h3>
               
               <div className="flex flex-col gap-4 mb-8">
                 {/* Price Box */}
                 <div className="p-5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5">
-                  <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">Boshlang&apos;ich narx</div>
-                  <div className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white leading-tight" dangerouslySetInnerHTML={{ __html: data.price.replace("so'mdan boshlab", "so'mdan<br/>boshlab") }}></div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">{t("serviceDetail.startingPrice")}</div>
+                  <div className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white leading-tight">{data.price}</div>
                 </div>
                 
                 {/* Warranty Box */}
                 <div className="p-5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex flex-col justify-center">
-                  <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">Kafolat muddati</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">{t("serviceDetail.warrantyPeriod")}</div>
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                     <span className="text-gray-900 dark:text-white font-bold">{data.warranty}</span>
@@ -149,7 +151,7 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
                 
                 {/* Time Box */}
                 <div className="p-5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex flex-col justify-center">
-                  <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">O&apos;rtacha vaqt</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">{t("serviceDetail.avgTime")}</div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
                     <span className="text-gray-900 dark:text-white font-bold">{data.time}</span>
@@ -160,7 +162,7 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
               <div className="h-px w-full bg-gradient-to-r from-transparent via-black/10 dark:via-white/10 to-transparent mb-8 relative z-10" />
               
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 font-medium leading-relaxed relative z-10">
-                Hoziroq bog&apos;laning va muammongizni hal qiling.
+                {t("serviceDetail.cta")}
               </p>
               
               <button 
@@ -168,7 +170,7 @@ export default function ServiceDetailsClient({ data }: { data: ServiceDetails })
                 className="w-full py-4 bg-blue-600 dark:bg-white text-white dark:text-black hover:bg-blue-700 dark:hover:bg-gray-200 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg dark:shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)] hover:shadow-xl dark:hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.5)] hover:-translate-y-1 relative z-10"
               >
                 <Phone size={18} />
-                Qo&apos;ng&apos;iroq qilish
+                {t("serviceDetail.callBtn")}
               </button>
 
             </motion.div>

@@ -110,5 +110,19 @@ export const tr = {
     a4: "Hayır, cihazınızdaki sorunu bulmak (teşhis) tamamen ücretsizdir. Servis maliyetini öğrendikten sonra karar verebilirsiniz.",
     q5: "Hangi ödeme yöntemleri mevcut?",
     a5: "Nakit, Payme, Click veya Uzcard/Humo kredi kartları ile ödeme yapabilirsiniz."
+  },
+  serviceDetail: {
+    back: "Tüm hizmetler",
+    type: "Hizmet türü",
+    process: "Onarım süreci",
+    info: "Bilgiler",
+    startingPrice: "Başlangıç fiyatı",
+    warrantyPeriod: "Garanti süresi",
+    avgTime: "Ortalama süre",
+    cta: "Hemen iletişime geçin ve sorununuzu çözün.",
+    callBtn: "Bizi arayın",
+  },
+  legal: {
+    backHome: "Ana sayfa",
   }
 };

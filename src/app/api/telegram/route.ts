@@ -60,7 +60,7 @@ export async function POST(req: Request) {
       }
     };
 
-    const t = templates[language] || templates['uz'];
+    const t = templates[language] || templates['ru'];
 
     const message = `
 ${t.title}

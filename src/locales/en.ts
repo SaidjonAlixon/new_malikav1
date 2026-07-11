@@ -110,5 +110,19 @@ export const en = {
     a4: "No, finding the problem with your device (diagnostics) is completely free. You can make a decision after finding out the service cost.",
     q5: "What payment methods are available?",
     a5: "You can pay in Cash, Payme, Click, or via Uzcard/Humo credit cards."
+  },
+  serviceDetail: {
+    back: "All services",
+    type: "Service type",
+    process: "Repair process",
+    info: "Information",
+    startingPrice: "Starting price",
+    warrantyPeriod: "Warranty period",
+    avgTime: "Average time",
+    cta: "Contact us now and solve your problem.",
+    callBtn: "Call us",
+  },
+  legal: {
+    backHome: "Home",
   }
 };

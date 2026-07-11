@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
           transition={{ delay: 0.6 }}
           className="mt-20 flex justify-center relative z-10"
         >
-          <a href="#" onClick={(e) => { e.preventDefault(); alert("Iltimos, kodingizdagi TestimonialsSection.tsx fayliga o'zingizning aniq Google My Business sharhlar (reviews) havolangizni joylang."); }} className="group relative flex items-center gap-3 px-8 py-4 rounded-full bg-black/5 dark:bg-white/[0.03] border border-black/10 dark:border-white/10 text-gray-900 dark:text-white transition-all duration-300 hover:bg-black/10 dark:hover:bg-white/[0.08] hover:border-black/20 dark:hover:border-white/20 hover:scale-105 hover:shadow-lg dark:hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)]">
+          <a href="#" onClick={(e) => { e.preventDefault(); alert("Пожалуйста, добавьте ссылку на ваши отзывы Google My Business в файле TestimonialsSection.tsx."); }} className="group relative flex items-center gap-3 px-8 py-4 rounded-full bg-black/5 dark:bg-white/[0.03] border border-black/10 dark:border-white/10 text-gray-900 dark:text-white transition-all duration-300 hover:bg-black/10 dark:hover:bg-white/[0.08] hover:border-black/20 dark:hover:border-white/20 hover:scale-105 hover:shadow-lg dark:hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)]">
             <span className="font-bold tracking-widest uppercase text-sm">{t("test.google")}</span>
             <ExternalLink size={18} className="text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" />
           </a>

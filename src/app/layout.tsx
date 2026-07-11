@@ -53,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased dark" suppressHydrationWarning>
+    <html lang="ru" className="h-full antialiased dark" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-white dark:bg-[#000000] text-black dark:text-white selection:bg-blue-600 selection:text-white transition-colors duration-500 overflow-x-hidden break-words">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <LanguageProvider>
